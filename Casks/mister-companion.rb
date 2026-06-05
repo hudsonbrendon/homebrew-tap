@@ -16,5 +16,13 @@ cask "mister-companion" do
 
   app "MiSTer Companion.app"
 
+  # The app is ad-hoc signed but not Apple-notarized (no paid Developer ID), so macOS
+  # would otherwise show the Gatekeeper "could not verify" prompt. Strip the download
+  # quarantine after install so it opens with a normal double-click.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/MiSTer Companion.app"]
+  end
+
   zap trash: "~/Library/Application Support/mister-companion"
 end
