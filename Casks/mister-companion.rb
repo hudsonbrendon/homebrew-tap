@@ -1,6 +1,6 @@
 cask "mister-companion" do
-  version "0.2.0"
-  sha256 "0e64f851d6af2ae438b73d7b2a4efda953981783610da82e24264032be8e882d"
+  version "0.2.1"
+  sha256 "0e231663a0b3a11f35de1584ce688605265edbc143721665f024f32d380da429"
 
   url "https://github.com/hudsonbrendon/mister-companion/releases/download/v#{version}/MiSTer-Companion-#{version}-arm64.dmg"
   name "MiSTer Companion"
